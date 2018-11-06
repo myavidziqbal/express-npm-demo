@@ -1,6 +1,6 @@
-require('dotenv').config()
+require("dotenv").config();
 
-const PORT = process.env.PORT||3000
+const PORT = process.env.PORT || 3000;
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
@@ -38,10 +38,10 @@ app.post("/todos", (req, res) => {
 //Search
 app.get("/todos/search", (req, res) => {
   const result = todoList.filter((todo, index) => {
-    return 
-      todo.description === req.query.description ||
+    return (
+      todo.description === req.query.description &&
       todo.done === JSON.parse(req.query.done)
-    
+    );
   });
   res.send(result);
 });
@@ -53,13 +53,13 @@ app.get("/todos/:id", (req, res) => {
 
 //Update
 app.put("/todos/:id", (req, res) => {
-    todoList[req,params.id] = req.body
+  todoList[(req, params.id)] = req.body;
   res.send(todoList);
 });
 
 //Delete
 app.delete("/todos/:id", (req, res) => {
-    todoList.splice(req.params.id, 1)
+  todoList.splice(req.params.id, 1);
   res.send(todoList);
 });
 
