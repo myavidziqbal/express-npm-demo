@@ -1,0 +1,19 @@
+{
+  "name": "npm-demo",
+  "version": "1.0.0",
+  "description": "Tutorial NPM",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "author": "Iqbal",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "pretty-error": "^2.1.1"
+  }
+}
